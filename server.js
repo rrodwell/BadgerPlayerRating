@@ -1,8 +1,8 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
-    methodOverride = require("method-override"),
-    tokenSecret = require("./tokensecret.js"),
-    cookieParser = require("cookie-parser");
+    methodOverride = require("method-override");
+    // tokenSecret = require("./tokensecret.js"),
+    // cookieParser = require("cookie-parser");
 
 
 var app = express();
