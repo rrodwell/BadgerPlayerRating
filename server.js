@@ -1,7 +1,6 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
-    jwtExp = require("express-jwt"),
     tokenSecret = require("./tokensecret.js"),
     cookieParser = require("cookie-parser");
 
@@ -18,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Cookie-parser; secret for cookie parser  is different for jwt token secret
-app.use(cookieParser(tokenSecret));
+// // Cookie-parser; secret for cookie parser  is different for jwt token secret
+// app.use(cookieParser(tokenSecret));
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
@@ -62,7 +61,7 @@ app.set("view engine", "handlebars");
 //     }
 // });
 
-app.use("/", userRoutes);
+// app.use("/", userRoutes);
 app.use(express.static("./public"));
 
 db.sequelize.sync().then(function () {
