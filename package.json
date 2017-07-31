@@ -1,0 +1,32 @@
+{
+  "name": "badger-player-rating",
+  "version": "1.0.0",
+  "description": "Recruiting DB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrodwell/BadgerPlayerRating.git"
+  },
+  "author": "Ryan Rodwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrodwell/BadgerPlayerRating/issues"
+  },
+  "homepage": "https://github.com/rrodwell/BadgerPlayerRating#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.2",
+    "mysql": "^2.14.0",
+    "path": "^0.12.7",
+    "pdfmake": "^0.1.32",
+    "validator": "^8.0.0"
+  }
+}
