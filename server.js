@@ -3,6 +3,7 @@ var express = require("express"),
     methodOverride = require("method-override");
     // tokenSecret = require("./tokensecret.js"),
     // cookieParser = require("cookie-parser");
+    mongoose = require("mongoose");
 
 
 var app = express();
