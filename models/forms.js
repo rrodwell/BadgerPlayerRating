@@ -1,43 +1,64 @@
-module.exports = function(sequelize, DataTypes) {
-    var Player = sequelize.define("player", {
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        position: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        proBowl: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        age: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        qb: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        rb: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        k: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        te: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        }
-    });
-    return Player;
-};
+var mongoose = require("mongoose");
+
+var Schema = mongoose.Schema;
+
+var criticalFactorSchema = new Schema({
+    factor: String,
+    measurement: String,
+    low: String,
+    medium: String,
+    high: String
+
+});
+
+var PositionFormSchema = new Schema({
+
+    Position: {
+        type: String,
+        required: true
+    },
+    Category1: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category2: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category3: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category4: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category5: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category6: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category7: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category8: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category9: {
+        type: [criticalFactorSchema],
+        required: true
+    },
+    Category10: {
+        type: [criticalFactorSchema],
+        required: true
+    }
+});
+
+var PositionForm = mongoose.model("PositionForm", PositionFormSchema);
+
+module.exports = PositionForm;
