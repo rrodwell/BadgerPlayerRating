@@ -58,3 +58,4 @@ typings/
 .env
 
 config/firebaseConfig.js
+config/serviceAccountKey.json

@@ -44,8 +44,15 @@ mongodb.once("open", function() {
 
 
 //Firebase Configuration and Connection
+var admin = require("firebase-admin");
 var firebaseConfig = require("./config/firebaseConfig");
-firebase.initializeApp(firebaseConfig);
+
+var serviceAccount = require("./config/serviceAccountKey.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: firebaseConfig.databaseURL
+});
 
 // // Import routes and give the server access to them.
 // var authRoutes = require("./controllers/auth-routes.js");
@@ -78,7 +85,10 @@ firebase.initializeApp(firebaseConfig);
 //     }
 // });
 
-// app.use("/", userRoutes);
+// Import routes and give the server access to them.
+var routes = require("./controllers/test-routes.js");
+app.use("/", routes);
+
 app.use(express.static("./public"));
 
 db.sequelize.sync().then(function () {
