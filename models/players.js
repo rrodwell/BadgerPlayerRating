@@ -1,93 +1,116 @@
 module.exports = function(sequelize, DataTypes) {
     var PlayerInformation = sequelize.define("PlayerInfo", {
+        playerID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true
+        },
         firstName: {
             type: DataTypes.STRING,
             allowNull: false
         },
         lastName: {
-            //WR
             type: DataTypes.STRING,
             allowNull: false
         },
-        proBowl: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        age: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        qb: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        rb: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        k: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        te: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        wr: {
-            //boolean 0/1
-            type: DataTypes.BOOLEAN,
-            allowNull: false
-        },
-        gamesPlayed: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        gamesStarted: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        receptions: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        longestReception: {
-            //int 2 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        longestRushingAttempt: {
-            //int 2 digits (can be neg)
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        pickNumber: {
-            //int 3 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        ydsSkd: {
-            //int 3 digits
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        fantasyPoints: {
-            //dec 10 dig 3 places
-            type: DataTypes.DECIMAL(10, 3),
-            allowNull: false
-        },
-        imgPath: {
+        recruitingCordinator: {
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        highSchool: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        state: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        gradYear: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        jerseyNumber: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        projectPosition: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        HT: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        WT: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        GPA: {
+            type: DataTypes.DOUBLE,
+            allowNull: false
+        },
+        SAT: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        ACT: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        evaluatedBy: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
+        },
+        score: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category1: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category2: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category3: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category4: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category5: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category6: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category7: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category8: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category9: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        category10: {
+            type: DataTypes.INTEGER,
             allowNull: false
         }
+
     });
     return PlayerInformation;
 };
