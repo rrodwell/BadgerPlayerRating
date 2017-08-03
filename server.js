@@ -43,6 +43,10 @@ mongodb.once("open", function() {
 });
 
 
+//Firebase Configuration and Connection
+var firebaseConfig = require("./config/firebaseConfig");
+firebase.initializeApp(firebaseConfig);
+
 // // Import routes and give the server access to them.
 // var authRoutes = require("./controllers/auth-routes.js");
 // var apiRoutes = require("./controllers/api-routes.js");
