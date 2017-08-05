@@ -1,9 +1,10 @@
 body {
-    background: url(assets/images/loginBackground.png);
-
+    background: url(../images/loginBackground.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.loginForm {
+.registerForm {
     position: absolute;
     width: 500px;
     height: 500px;
@@ -12,5 +13,8 @@ body {
     margin: -200px 0 0 -250px;
     background-color: black;
     opacity: 0.75;
+    color: darkgrey;
+    text-align: center;
 }
+
 
