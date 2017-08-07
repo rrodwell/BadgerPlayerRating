@@ -86,7 +86,7 @@ admin.initializeApp({
 // });
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/test-routes.js");
+var routes = require("./controllers/html-routes.js");
 app.use("/", routes);
 
 app.use(express.static("./public"));
