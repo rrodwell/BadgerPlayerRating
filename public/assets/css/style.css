@@ -9,14 +9,17 @@ body {
     width: 500px;
     top: 50%;
     left: 50%;
-    margin: -200px 0 0 -250px;
+    margin: -250px 0 0 -250px;
     background-color: rgba(0, 0, 0, 0.75);
     color: whitesmoke;
     text-align: center;
 }
 
 .submitBtn {
-    background-color: green;
+    background-color: #008000;
     width: 95%;
 }
 
+.btn:hover, .btn-large:hover, .btn:after, .btn:before{
+    background-color: #009e00;
+}
