@@ -12,6 +12,19 @@ router.get("/register", function(req,res){
     res.render("register", hsObj);
 });
 
+router.get("/login", function(req,res){
+    hsObj = {
+        title: "Badger Player Rating | Login"
+    };
+    res.render("login", hsObj);
+});
+
+router.get("/updatepassword", function(req,res){
+    hsObj = {
+        title: "Badger Player Rating | Update Password"
+    };
+    res.render("updatePassword", hsObj);
+});
 
 // Export routes for server.js to use.
 module.exports = router;
