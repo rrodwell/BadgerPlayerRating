@@ -6,7 +6,10 @@ var router = express.Router();
 
 
 router.get("/register", function(req,res){
-    res.render("register");
+    hsObj = {
+        title: "Badger Player Rating | Register"
+    };
+    res.render("register", hsObj);
 });
 
 
