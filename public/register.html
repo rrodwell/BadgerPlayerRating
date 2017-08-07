@@ -19,7 +19,7 @@
 
 </head>
     <body>
-        <div class="registerForm">
+        <div class="registerForm center-align">
             <h4>Create account</h4>
             <div class="row">
                 <form class="col s12">
@@ -35,7 +35,7 @@
                         <div class="input-field col s12">
                             <select>
                                 <option value="" disabled selected>Choose your role</option>
-                                <option value="1">Coach</option>
+                                <option value="1">Position Coach</option>
                                 <option value="2">Recruiting Staff</option>
                                 <option value="3">Graduate Assistant</option>
                             </select>
@@ -45,6 +45,8 @@
                             <input id="email" type="email" class="validate">
                             <label for="email" data-error="wrong" data-success="right">Email</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <input id="password" type="password" class="validate">
                             <label for="password">Password</label>
@@ -57,6 +59,9 @@
                     <button class="btn waves-effect waves-light submitBtn" type="submit" name="action">Create Account
                     </button>
                 </form>
+            </div>
+            <div>
+                <p>Already have an account?  <a href="/login" style="text-decoration: underline;">Log In</a></p>
             </div>
         </div>
 
