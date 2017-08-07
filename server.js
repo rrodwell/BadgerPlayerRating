@@ -30,17 +30,17 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
-// MongoDB Configuration configuration
-mongoose.connect("mongodb://localhost/BadgerNation");
-var mongodb = mongoose.connection;
-
-mongodb.on("error", function(err) {
-    console.log("Mongoose Error: ", err);
-});
-
-mongodb.once("open", function() {
-    console.log("Mongoose connection successful.");
-});
+// // MongoDB Configuration configuration
+// mongoose.connect("mongodb://localhost/BadgerNation");
+// var mongodb = mongoose.connection;
+//
+// mongodb.on("error", function(err) {
+//     console.log("Mongoose Error: ", err);
+// });
+//
+// mongodb.once("open", function() {
+//     console.log("Mongoose connection successful.");
+// });
 
 
 //Firebase Configuration and Connection
