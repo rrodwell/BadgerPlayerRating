@@ -4,3 +4,8 @@
 $(document).ready(function() {
     $('select').material_select();
 });
+
+$('.saveBtn').click(function(){
+   var password = $('#password').val();
+   console.log(password);
+});
