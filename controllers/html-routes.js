@@ -5,6 +5,10 @@ var express = require("express");
 var router = express.Router();
 
 
+router.get("/", function(req, res){
+    res.redirect("/login");
+});
+
 router.get("/register", function(req,res){
     hsObj = {
         title: "Badger Player Rating | Register"

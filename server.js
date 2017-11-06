@@ -91,8 +91,12 @@ app.use("/", routes);
 
 app.use(express.static("./public"));
 
-db.sequelize.sync().then(function () {
-    app.listen(PORT, function () {
-        console.log("Node app is running on port " + PORT);
-    });
+// db.sequelize.sync().then(function () {
+//     app.listen(PORT, function () {
+//         console.log("Node app is running on port " + PORT);
+//     });
+// });
+
+app.listen(PORT, function() {
+    console.log("Listening on ", PORT);
 });
